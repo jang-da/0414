@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #pyramidContainer {
+      white-space: pre; 공백과 줄바꿈 유지 */
+      /* font-family: monospace;} 별들이 같은 간격으로 보이도록 */
+      /* div 사용시 사용할것 */
+    </style>
+  </head>
+  <body>
+    <!-- <div id="pyramidContainer"></div> 사각형 박스형태-->
+    <pre id="pyramidContainer"></pre>
+    액자형태로 스크립트의 형태를 그대로 가져옴
+    <br />
+    <script>
+      // let output = 0;
+      // for (let i = 1; i < 100; i++) {
+      //   output = output + 1;
+      // }
+      // console.log(`1~100까지 숫자를 모두 더하면 ${output}입니다.`);
+
+      // const todos = ["우유구매", "업무메일확인하기"];
+      // for (let i = 0; i < todos / length; i++) {
+      //   console.log(`${i == +1}번째 할 일 : ${todos[i]}`);
+      // }
+
+      // for (let = 2; i >= 0; i--) {
+      //   console.log(`${i + 1}번째 할 일 : ${todos[i]}`);
+      // }
+      // for (let = 2; i < todos.length; i--) {
+      //   console.log(`${i + 1}번째 할 일 : ${todos[i]}`);
+      // }
+      // for (let = todos.length-1; i > -1; i--) {
+      //   console.log(`${i + 1}번째 할 일 : ${todos[i]}`);
+      // }
+
+      // 짝수만 더하기
+      // let output2 = 0;
+      // for (let i = 1; i <= 10; i++) {
+      //   if (i % 2 === 0) {
+      //     continue; //결과값이 거짓이면 위로 올라가서 다시 진행함
+      //   }
+      //   output2 += i;
+      // }
+      // //출력합니다.
+      // alert(output2);
+
+      // let output3 = "";
+      // for (let i = 1; i <= 10; i++) {
+      //   for (let j = 0; j < i; j++) {
+      //     output3 += "*";
+      //   }
+      //   output3 += "\n";
+      // }
+      // console.log(output3);
+
+      let output4 = "";
+      // 늘어나는 부분 (가운데 정렬)
+      for (let i = 1; i < 15; i++) {
+        for (let j = 15; j > i; j--) {
+          output4 += " ";
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+          output4 += "*";
+        }
+        output4 += "\n";
+      }
+      // 줄어드는 부분 (가운데 정렬)
+      for (let i = 14; i > 0; i--) {
+        for (let j = 15; j > i; j--) {
+          output4 += " ";
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+          output4 += "*";
+        }
+        output4 += "\n";
+      }
+      const pyramidContainer = document.getElementById("pyramidContainer");
+      pyramidContainer.innerHTML = output4; // 또는 pyramidContainer.textContent = output4;
+    </script>
+  </body>
+</html>
